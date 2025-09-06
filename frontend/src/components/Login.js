@@ -56,7 +56,7 @@ export default function Login() {
     e.preventDefault();
     try {
       setError(null);
-      const res = await API.post("/auth/login", form);
+      const res = await API.post("/api/auth/login", form);
       login(res.data);
     } catch (err) {
       console.error("Login failed:", err.response ? err.response.data : err.message);
