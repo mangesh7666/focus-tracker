@@ -1,19 +1,4 @@
 // models/stresslog.js
-/*const mongoose = require('mongoose');
-
-const StressLog = new mongoose.Schema({
-  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-  level: { type: Number, required: true }, // 0..1 scale or whichever you choose
-  method: { type: String, enum: ['webcam', 'behavior', 'other'], default: 'other' },
-  meta: { type: Object, default: {} },
-  createdAt: { type: Date, default: Date.now }
-});
-
-module.exports = mongoose.model('StressLog', StressLog);*/
-
-
-
-// models/stresslog.js
 const mongoose = require('mongoose');
 
 const StressLog = new mongoose.Schema({
