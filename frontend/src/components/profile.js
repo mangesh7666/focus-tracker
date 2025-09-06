@@ -70,14 +70,14 @@ export default function ProfilePage() {
     }
   };
 
-  const getAvatarURL = () => {
-    if (preview) return preview;
-    if (avatar) {
-      const path = avatar.startsWith("/") ? avatar.slice(1) : avatar;
-      return `${BASE_URL}${path}`;
-    }
-    return "https://via.placeholder.com/150";
-  };
+ const getAvatarURL = () => {
+  if (preview) return preview;
+  if (avatar) {
+    return `${BASE_URL.replace(/\/$/, "")}/${avatar.replace(/^\//, "")}`;
+  }
+  return "https://via.placeholder.com/150";
+};
+
 
   return (
     <div className="d-flex justify-content-center align-items-start mt-5">
