@@ -32,7 +32,7 @@ const StressSummary = () => {
         };
 
         // Make sure to update this URL to your actual backend endpoint
-        const response = await API.get("/fetch/stress-summary", config);
+        const response = await API.get("/api/fetch/stress-summary", config);
         setStressData(response.data);
       } catch (err) {
         console.error("Error fetching stress data:", err);
