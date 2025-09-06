@@ -282,7 +282,7 @@ export default function Settings() {
   useEffect(() => {
     const fetchSettings = async () => {
       try {
-        const res = await API.get("/settings");
+        const res = await API.get("/api/settings");
         setCustomSites(res.data.customSiteLimits || []);
         setUnfreezeDuration(res.data.unfreezeDurationMinutes || 15);
       } catch (err) {
