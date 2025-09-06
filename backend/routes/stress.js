@@ -59,7 +59,7 @@ const router = express.Router();
 
 const auth = require('../middleware/auth'); // Your existing auth middleware
 const upload = require('../config/multer'); // We'll create this next
-const StressLog = require('../models/StressLog');
+const StressLog = require('../models/stresslog');
 
 // POST /api/stress/process-video - Main endpoint to receive video from the extension
 router.post('/process-video', auth, upload.single('video'), async (req, res, next) => {
