@@ -9,7 +9,7 @@ export default function ProfilePage() {
   const [loading, setLoading] = useState(false);
 
   const token = localStorage.getItem("jwTtoken");
-  const BASE_URL = "https://focus-tracker-1-trs3.onrender.com";
+  const BASE_URL = "https://focus-tracker-1-trs3.onrender.com/";
 
   useEffect(() => {
     const fetchProfile = async () => {
