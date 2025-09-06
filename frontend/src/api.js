@@ -1,23 +1,5 @@
 import axios from "axios";
 
-// Original Code
-// import axios from "axios";
-//
-// const API = axios.create({
-//   baseURL: "http://localhost:5000/api", // backend URL
-// });
-//
-// // Attach JWT to all requests
-// API.interceptors.request.use((config) => {
-//   const token = localStorage.getItem("jwtToken");
-//   if (token) {
-//     config.headers.Authorization = `Bearer ${token}`;
-//   }
-//   return config;
-// });
-//
-// export default API;
-
 // Corrected and Updated Code
 const API = axios.create({
   baseURL: "https://focus-tracker-1-trs3.onrender.com", // Your backend URL
