@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Screen Time Monitor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- This is the view that will be shown if the user is NOT logged in. -->
+  <!-- It is hidden by default and shown by the JavaScript. -->
+  <div id="loginView" style="display: none;">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input id="email" type="email" placeholder="Email"><br>
+      <input id="password" type="password" placeholder="Password"><br>
+      <button type="submit" id="loginBtn">Login</button>
+    </form>
+    <p id="loginStatus"></p>
+  </div>
+
+  <!-- This is the view that will be shown if the user IS logged in. -->
+  <!-- It is hidden by default and shown by the JavaScript. -->
+  <div id="loggedInView" style="display: none;">
+    <h2>Welcome!</h2>
+    <p>You are logged in.</p>
+    <button id="logoutBtn">Logout</button>
+  </div>
+  
+  <!--<button id="openCamera">Start Camera</button>-->
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  width: 200px;
+  color: #333;
+}
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-color: #45a049;
+}
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+#message {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.success {
+    color: green;
+}
+.error {
+    color: red;
+}

@@ -1,0 +1,230 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time's Up!</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #a8edea, #fed6e3);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            flex-direction: column;
+        }
+        .container {
+            padding: 25px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            max-width: 550px;
+        }
+        h1 {
+            color: #d9534f;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #4CAF50;
+            margin-top: 0;
+        }
+        p {
+            font-size: 1.1em;
+        }
+        #countdown {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #ff5722;
+            margin: 15px 0;
+        }
+        ul {
+            text-align: left;
+            margin: 15px auto;
+            max-width: 400px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .emoji {
+            font-size: 1.4em;
+        }
+    </style>
+</head>
+<body>
+   <div class="container" style="display: flex; align-items: center; gap: 20px;">
+    
+    <div style="flex: 1;">
+        <img id="relaxImage" src="" alt="Relax Image" style="width: 100%; border-radius: 12px;">
+    </div>
+
+   
+    <div style="flex: 1; text-align: left;">
+        <h1>⏳ Time's Up!</h1>
+        <h2>Take a break for your health</h2>
+        <p>You’ve reached your daily time limit for this site.</p>
+        <p>This page will unfreeze in:</p>
+        <div id="countdown"></div>
+
+        <h3>💡 Quick Break Ideas</h3>
+        <ul>
+            <li>🚶‍♂️ Take a short walk</li>
+            <li>🧘‍♀️ Do 3 minutes of deep breathing</li>
+            <li>💧 Drink a glass of water</li>
+            <li>🙆‍♂️ Stretch your arms and neck</li>
+        </ul>
+
+        <p><b>Tip:</b> If you reopen the tab before the timer ends, it will still be frozen.</p>
+    </div>
+</div>
+
+    <script src="frozen.js"></script>
+</body>
+</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Time's Up!</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        margin: 0;
+        height: 100vh;
+        background: linear-gradient(135deg, #a8edea, #fed6e3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        background-color: rgba(255,255,255,0.9);
+        border-radius: 16px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        padding: 25px;
+        max-width: 800px;
+        width: 90%;
+    }
+    .left {
+        flex: 1;
+    }
+    .left img {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .right {
+        flex: 1;
+        text-align: left;
+        position: relative;
+    }
+    h1 { color: #d9534f; margin: 0 0 10px 0; }
+    h2 { color: #4CAF50; margin-top: 0; }
+    p { font-size: 1.1em; margin: 5px 0; }
+    ul { margin: 10px 0; padding-left: 20px; }
+    li { margin-bottom: 8px; }
+    #countdown {
+        font-size: 2em;
+        font-weight: bold;
+        color: #ff5722;
+        margin: 15px 0;
+        text-align: center;
+    }
+    #quote {
+        font-style: italic;
+        margin: 10px 0 20px 0;
+        color: #555;
+    }
+    /* Circular countdown */
+    .circle {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 8px solid #ccc;
+        border-top-color: #ff5722;
+        animation: spin 1s linear infinite;
+        margin: 10px 0;
+    }
+    @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+
+    .camera-btn {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease, transform 0.2s ease;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.camera-btn:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    transform: scale(1.07);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.camera-btn:active {
+    transform: scale(0.95);
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <!-- Left: Relax Image -->
+    <div class="left">
+        <img id="relaxImage" src="" alt="Relax Image" style="height:100%"><br><br>
+        <button id="openCamera" class = "camera-btn">Start Camera to analyze you stress level</button>
+
+    </div>
+
+    <!-- Right: Content -->
+    <div class="right">
+        <h1>⏳ Time's Up!</h1>
+        <h2>Take a Break for Your Health</h2>
+        <p>You’ve reached your daily time limit for this site.</p>
+
+        <div id="quote">“Relax your mind, recharge your body.”</div>
+
+        <div class="circle"></div>
+        <div id="countdown">--:--</div>
+
+        <div id="stressResult" style="margin-top:15px; font-size:1.3em; font-weight:bold; color:#1976d2;">
+          Waiting for stress analysis...
+        </div>
+
+        <h3>💡 Quick Break Ideas</h3>
+        <ul>
+            <li>🚶‍♂️ Take a short walk</li>
+            <li>🧘‍♀️ 3 minutes of deep breathing</li>
+            <li>💧 Drink a glass of water</li>
+            <li>🙆‍♂️ Stretch your arms and neck</li>
+        </ul>
+    </div>
+</div>
+
+<script src="frozen.js"></script>
+<script src="relaxImages.js"></script>
+</body>
+</html>
+

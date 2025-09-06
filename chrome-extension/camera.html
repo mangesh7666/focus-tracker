@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camera</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #333;
+      color: white;
+    }
+    video {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h3>Camera Preview</h3>
+  <video id="camera" autoplay></video>
+  <button id="startCameraButton">Start Camera</button>
+  <script src="camera.js"></script>
+</body>
+</html>
