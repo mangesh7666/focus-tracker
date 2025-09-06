@@ -20,7 +20,7 @@ const StressChart = () => {
     const fetchLogs = async () => {
       try {
         const token = localStorage.getItem("authToken"); // or however you store it
-        const res = await API.get("/fetch/stress-logs", {
+        const res = await API.get("/api/fetch/stress-logs", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setData(res.data);
