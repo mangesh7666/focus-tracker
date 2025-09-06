@@ -1,7 +1,7 @@
 
 // --- state ---
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://focus-tracker-1-trs3.onrender.com";
 
 let authToken = null;
 
