@@ -41,13 +41,13 @@ function TimeChart() {
     async function fetchData() {
       try {
         console.log("Fetching user settings and aggregated logs...");
-        const settingsRes = await API.get("/settings", {
+        const settingsRes = await API.get("/api/settings", {
           headers: { Authorization: `Bearer ${jwtToken}` },
         });
         setUserSettings(settingsRes.data);
         console.log("Settings response:", settingsRes.data);
 
-        const logsRes = await API.get("/time/daily-by-site", {
+        const logsRes = await API.get("/api/time/daily-by-site", {
           headers: { Authorization: `Bearer ${jwtToken}` },
         });
         console.log("Aggregated daily-by-site logs response:", logsRes.data);
