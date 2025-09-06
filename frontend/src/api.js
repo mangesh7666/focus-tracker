@@ -20,7 +20,7 @@ import axios from "axios";
 
 // Corrected and Updated Code
 const API = axios.create({
-  baseURL: "http://localhost:5000/api", // Your backend URL
+  baseURL: "https://focus-tracker-1-trs3.onrender.com", // Your backend URL
 });
 
 // Attach JWT to all requests
