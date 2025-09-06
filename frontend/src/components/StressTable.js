@@ -9,7 +9,7 @@ const StressTable = () => {
     const fetchLogs = async () => {
       try {
         const token = localStorage.getItem("jwtToken");
-        const res = await API.get("/fetch/stress-logs1", {
+        const res = await API.get("/api/fetch/stress-logs1", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setRecords(res.data);
