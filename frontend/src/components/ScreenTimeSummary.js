@@ -14,7 +14,7 @@ const ScreenTimeSummary = () => {
     const fetchSummary = async () => {
       try {
         const token = localStorage.getItem("jwtToken");
-        const res = await API.get("/fetch/screen-time-summary", {
+        const res = await API.get("/api/fetch/screen-time-summary", {
           headers: { Authorization: `Bearer ${token}` }
         });
 
