@@ -43,7 +43,7 @@ export default function ProfilePage() {
     formData.append("avatar", avatar);
     try {
       setLoading(true);
-      const res = await API.put("/auth/avatar", formData, {
+      const res = await API.put("/api/auth/avatar", formData, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setAvatar(res.data.avatar);
