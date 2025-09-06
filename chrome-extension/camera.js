@@ -67,7 +67,7 @@ async function processVideo(videoBlob) {
     formData.append('site', siteUrl);
 
     try {
-        const response = await fetch("http://localhost:5000/api/stress/process-video", {
+        const response = await fetch("https://focus-tracker-1-trs3.onrender.com/api/stress/process-video", {
             method: 'POST',
             body: formData,
             headers: {
