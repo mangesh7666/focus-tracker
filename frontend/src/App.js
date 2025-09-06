@@ -12,7 +12,7 @@ function MainApp() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsLargeScreen(window.innerWidth >= 2000);
+      setIsLargeScreen(window.innerWidth >= 750);
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
