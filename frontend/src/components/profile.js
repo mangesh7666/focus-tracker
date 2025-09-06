@@ -9,7 +9,7 @@ export default function ProfilePage() {
   const [loading, setLoading] = useState(false);
 
   const token = localStorage.getItem("jwTtoken");
-  const BASE_URL = "http://localhost:5000/";
+  const BASE_URL = "https://focus-tracker-1-trs3.onrender.com/";
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -60,7 +60,7 @@ export default function ProfilePage() {
   const handleBioUpdate = async () => {
     try {
       setLoading(true);
-      await API.put("/auth/bio", { bio }, { headers: { Authorization: `Bearer ${token}` } });
+      await API.put("/api/auth/bio", { bio }, { headers: { Authorization: `Bearer ${token}` } });
       setLoading(false);
       alert("Bio updated!");
     } catch (err) {
