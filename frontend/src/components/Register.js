@@ -2,54 +2,6 @@ import React, { useState, useContext } from "react";
 import API from "../api";
 import { AuthContext } from "../context/AuthContext";
 
-// Original Code
-// import React, { useState, useContext } from "react";
-// import API from "../api";
-// import { AuthContext } from "../context/AuthContext";
-//
-// export default function Register() {
-//   const { login } = useContext(AuthContext);
-//   const [form, setForm] = useState({ name: "", email: "", password: "" });
-//   const [error, setError] = useState(null);
-//
-//   const submit = async (e) => {
-//     e.preventDefault();
-//     try {
-//       // Clear any previous errors
-//       setError(null);
-//       const res = await API.post("/auth/register", form);
-//       // The login function in AuthContext will handle storing the token and user
-//       login(res.data);
-//     } catch (err) {
-//       console.error("Registration failed:", err.response ? err.response.data : err.message);
-//       setError(err.response?.data?.message || "An error occurred during registration.");
-//     }
-//   };
-//
-//   return (
-//     <form onSubmit={submit}>
-//       <h2>Register</h2>
-//       {error && <p style={{ color: 'red' }}>{error}</p>}
-//       <input
-//         placeholder="Name"
-//         onChange={(e) => setForm({ ...form, name: e.target.value })}
-//         value={form.name}
-//       />
-//       <input
-//         placeholder="Email"
-//         onChange={(e) => setForm({ ...form, email: e.target.value })}
-//         value={form.email}
-//       />
-//       <input
-//         type="password"
-//         placeholder="Password"
-//         onChange={(e) => setForm({ ...form, password: e.target.value })}
-//         value={form.password}
-//       />
-//       <button type="submit">Sign Up</button>
-//     </form>
-//   );
-// }
 
 // Corrected and Updated Code
 export default function Register() {
