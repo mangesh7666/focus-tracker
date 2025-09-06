@@ -303,7 +303,7 @@ export default function Settings() {
     setError(null);
     setSuccessMessage(null);
     try {
-      const res = await API.put("/settings/custom-sites", {
+      const res = await API.put("/api/settings/custom-sites", {
         site: newSite,
         dailyLimitMinutes: newLimit,
       });
@@ -336,7 +336,7 @@ export default function Settings() {
       return;
     }
     try {
-      await API.put("/settings", { unfreezeDurationMinutes: unfreezeDuration });
+      await API.put("/api/settings", { unfreezeDurationMinutes: unfreezeDuration });
       setSuccessMessage("Unfreeze duration saved!");
     } catch (err) {
       setError("Failed to save unfreeze duration.");
