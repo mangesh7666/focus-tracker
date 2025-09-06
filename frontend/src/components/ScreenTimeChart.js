@@ -18,7 +18,7 @@ const ScreenTimeChart = () => {
           return;
         }
 
-        const res = await API.get("/fetch/screen-time", {
+        const res = await API.get("/api/fetch/screen-time", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
