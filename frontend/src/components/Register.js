@@ -61,7 +61,7 @@ export default function Register() {
     e.preventDefault();
     try {
       setError(null);
-      const res = await API.post("/auth/register", form);
+      const res = await API.post("/api/auth/register", form);
       login(res.data);
     } catch (err) {
       console.error("Registration failed:", err.response ? err.response.data : err.message);
