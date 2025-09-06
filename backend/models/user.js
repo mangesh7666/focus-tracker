@@ -32,10 +32,6 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-// The key change is here:
-// This checks if the 'User' model has already been compiled.
-// If it has, it exports the existing model.
-// If not, it compiles and exports the new model.
 const User = mongoose.models.User || mongoose.model('User', userSchema);
 
 module.exports = User;
