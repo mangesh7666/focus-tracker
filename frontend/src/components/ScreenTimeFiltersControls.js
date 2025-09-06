@@ -173,7 +173,7 @@ const ScreenTimeFilterControls = () => {
     const fetchData = async () => {
       try {
         const token = localStorage.getItem("jwtToken");
-        const res = await API.get("/fetch/screen-time-records1", {
+        const res = await API.get("/api/fetch/screen-time-records1", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
