@@ -14,7 +14,7 @@ export default function ProfilePage() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await API.get("/auth/profile", {
+        const res = await API.get("api/auth/profile", {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (res.data?.profile) {
