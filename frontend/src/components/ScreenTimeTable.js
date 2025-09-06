@@ -9,7 +9,7 @@ const ScreenTimeTable = () => {
     const fetchRecords = async () => {
       try {
         const token = localStorage.getItem("authToken");
-        const res = await API.get("/fetch/screen-time-records", {
+        const res = await API.get("/api/fetch/screen-time-records", {
           headers: { Authorization: `Bearer ${token}` }
         });
 
