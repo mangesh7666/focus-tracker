@@ -9,7 +9,7 @@ const TopSites = () => {
     const fetchTopSites = async () => {
       try {
         const token = localStorage.getItem("jwtToken");
-        const res = await API.get("/fetch/screen-time", {
+        const res = await API.get("/api/fetch/screen-time", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
