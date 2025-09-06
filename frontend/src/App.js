@@ -1,34 +1,33 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { AuthProvider, AuthContext } from "./context/AuthContext";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Dashboard from "./components/Dashboard";
 
-import "chart.js/auto";
-
 function MainApp() {
   const { user } = useContext(AuthContext);
-  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 2000);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsLargeScreen(window.innerWidth >= 750);
+    // Function to check screen size
+    const checkScreenSize = () => {
+      setIsSmallScreen(window.innerWidth < 750);
     };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+
+    checkScreenSize(); // run on first load
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
-  // 🚫 Show message if screen is too small
-  if (!isLargeScreen) {
+  if (isSmallScreen) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-red-100 p-6 text-center">
-        <div className="bg-white shadow-lg rounded-xl p-8 max-w-lg">
-          <h1 className="text-2xl font-bold text-red-600 mb-4">
-            Screen Too Small
-          </h1>
-          <p className="text-gray-700">
-            This site is only available on large screens (2000px and above).
-            Please view it on a bigger display.
+      <div className="flex items-center justify-center min-h-screen bg-gray-100">
+        <div className="text-center p-6 bg-white shadow-md rounded-lg">
+          <h1 className="text-2xl font-bold mb-2">Screen Too Small</h1>
+          <p className="text-gray-600">
+            This site is only available on screens 750px and above.  
+            Please use a larger display.
           </p>
         </div>
       </div>
