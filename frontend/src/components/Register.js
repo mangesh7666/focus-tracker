@@ -144,7 +144,7 @@ export default function Register() {
         />
         <button
           type="submit"
-          className="w-full px-4 py-3 bg-indigo-600 text-white font-bold rounded-lg shadow-md hover:bg-indigo-700 transition-colors duration-300"
+          className="w-full px-4 py-3 bg-indigo-600 text-dark font-bold rounded-lg shadow-md hover:bg-indigo-700 transition-colors duration-300"
         >
           Sign Up
         </button>
